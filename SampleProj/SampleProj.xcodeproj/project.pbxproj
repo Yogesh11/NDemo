@@ -10,6 +10,7 @@
 		6E4E628B1D0CC1FC64432932 /* Pods_SampleProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908A8068E73FB7C24D6623D4 /* Pods_SampleProj.framework */; };
 		B8177A9A3452DE71B7C7279C /* Pods_SampleProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81450CB576F1482EDDEAAF6 /* Pods_SampleProjTests.framework */; };
 		C5B6B8B1871F824386540AAC /* Pods_SampleProjUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11095B059B9E6668ED6AC704 /* Pods_SampleProjUITests.framework */; };
+		EC0F05C221893001000686DF /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F05C121893001000686DF /* UserCell.swift */; };
 		ECAB5999218850E800673F76 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAB5998218850E800673F76 /* ViewModel.swift */; };
 		ECAB599B2188510000673F76 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAB599A2188510000673F76 /* UserModel.swift */; };
 		ECAB599E2188738C00673F76 /* UIViewController + Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAB599D2188738C00673F76 /* UIViewController + Function.swift */; };
@@ -53,6 +54,7 @@
 		6056C3A754E3F67D3E11F83C /* Pods-SampleProjTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleProjTests.debug.xcconfig"; path = "Target Support Files/Pods-SampleProjTests/Pods-SampleProjTests.debug.xcconfig"; sourceTree = "<group>"; };
 		908A8068E73FB7C24D6623D4 /* Pods_SampleProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81450CB576F1482EDDEAAF6 /* Pods_SampleProjTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleProjTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC0F05C121893001000686DF /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		ECAB5998218850E800673F76 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		ECAB599A2188510000673F76 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		ECAB599D2188738C00673F76 /* UIViewController + Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Function.swift"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 		ECD587D8217DA15700BFC188 /* ViewAndCell */ = {
 			isa = PBXGroup;
 			children = (
+				EC0F05C121893001000686DF /* UserCell.swift */,
 			);
 			path = ViewAndCell;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				ECAB599E2188738C00673F76 /* UIViewController + Function.swift in Sources */,
 				ECAB5999218850E800673F76 /* ViewModel.swift in Sources */,
 				ECAB599B2188510000673F76 /* UserModel.swift in Sources */,
+				EC0F05C221893001000686DF /* UserCell.swift in Sources */,
 				ECABAE62217DD5EE0036E009 /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

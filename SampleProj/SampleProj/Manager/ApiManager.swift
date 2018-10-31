@@ -23,9 +23,8 @@ class ApiManager: NSObject {
         super.init()
     }
 
-    func getIssues(_ state : String , orgName : String, repoName : String, onCompletion : @escaping Constant.CompletionBlock) {
-        let url = String(format: "https://api.github.com/repos/%@/%@/issues?state=%@",orgName ,repoName , state)
-        let request = makeRequest(url: url, methodType: Constant.Api.kGetRequest)
+    func fetchUsers(onCompletion : @escaping Constant.CompletionBlock) {
+        let request = makeRequest(url: Constant.Api.kEndPoint, methodType: Constant.Api.kGetRequest)
         makeTask(request: request, onCompletion: onCompletion)
     }
 
@@ -54,8 +53,8 @@ class ApiManager: NSObject {
             }
             do {
                 let json =  try JSONSerialization.jsonObject(with: data)
-                if let responseJson  =  json as? [[String : Any]]{
-                    onCompletion(responseJson as AnyObject, nil)
+                if let responseJson  =  json as? [String : Any] , let dataJson = responseJson["data"] as?  [[String : Any]], !dataJson.isEmpty {
+                    onCompletion(dataJson as AnyObject, nil)
                 } else{
                     onCompletion(nil, self.prepareError(error: error))
                 }

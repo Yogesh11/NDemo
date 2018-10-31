@@ -10,7 +10,7 @@ import Foundation
 
 struct Constant {
     struct Api {
-        // static let kEndPoint  = "http://www.omdbapi.com/?s=Batman&page"
+        static let kEndPoint  = "https://test-api.nevaventures.com/"
         static let kGetRequest = "GET"
     }
     

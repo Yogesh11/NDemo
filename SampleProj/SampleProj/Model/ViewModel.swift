@@ -11,9 +11,19 @@ import UIKit
 class ViewModel: NSObject {
   var userModels : [UserModel] = [UserModel]()
     func fetchData(completionBlock  : @escaping Constant.CompletionBlock) {
-        DispatchQueue.main.async {
-            completionBlock("Done" as AnyObject, nil)
+        ApiManager.sharedInstance.fetchUsers{ (json, error) in
+            if let responseJson = json as? [[String : Any]] {
+                for model in responseJson{
+                    let userModel : UserModel = UserModel()
+                    userModel.makeModel(json: model)
+                    self.userModels.append(userModel)
+                }
+            }
+            DispatchQueue.main.async {
+                completionBlock("Done" as AnyObject, error)
+            }
         }
+
 
     }
 }

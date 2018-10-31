@@ -7,7 +7,6 @@ target 'SampleProj' do
    pod 'SDWebImage', '~> 4.0'
    pod 'IQKeyboardManager'
    pod 'SVProgressHUD'
-   pod 'TrueTime'
   # Pods for SampleProj
 
   target 'SampleProjTests' do

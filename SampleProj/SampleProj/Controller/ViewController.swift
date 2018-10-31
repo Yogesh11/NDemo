@@ -18,12 +18,13 @@ class ViewController: UIViewController {
         initializeTableViewProps()
         fetchData()
     }
-
+    
     /// initialize TableView props
     private func initializeTableViewProps(){
         tableLayout.tableFooterView = UIView(frame: .zero)
         tableLayout.delegate        = self
         tableLayout.dataSource      = self
+        tableLayout.rowHeight       = UITableView.automaticDimension
     }
 
     /// Get Data
@@ -51,7 +52,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
 
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      return UITableViewCell()
+        let userCell = tableView.dequeueReusableCell(withIdentifier: "UserCell") as! UserCell
+        userCell.displayContent(userModel: viewModel.userModels[indexPath.row])
+        return userCell
     }
 
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
